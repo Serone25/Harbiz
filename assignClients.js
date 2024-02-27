@@ -35,3 +35,5 @@
     //console.log(assignment);
     return assignment;
   } 
+
+  module.exports = {assignClients};                                                                          //test de jest
