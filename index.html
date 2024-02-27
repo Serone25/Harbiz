@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harbiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <img src="Harbiz.png" id="logo">
+    <table class="tableTrainer">
+      <tr>
+        <th>Nombre del entrenador</th>
+        <th>Reputación</th>
+        <th>Plazas disponibles</th>
+      </tr>
+      <tr>
+        <td>A</td>
+        <td>4.5</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>B</td>
+        <td>3.2</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td>1.2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td>3.4</td>
+        <td>2</td>
+      </tr>
+    </table>
+    <table class="tableClient">
+      <tr>
+        <th>Nombre de cliente</th>
+        <th>Importancia de la reputación del entrenador</th>
+        </tr>
+      <tr>
+        <td>q</td>
+        <td>2.6</td>
+      </tr>
+      <tr>
+        <td>r</td>
+        <td>3.7</td>
+      </tr>
+      <tr>
+        <td>s</td>
+        <td>8.5</td>
+      </tr>
+      <tr>
+        <td>t</td>
+        <td>9.7</td>
+      </tr>
+      <tr>
+        <td>u</td>
+        <td>2.6</td>
+      </tr>
+      <tr>
+        <td>v</td>
+        <td>4.7</td>
+      </tr>
+      <tr>
+        <td>w</td>
+        <td>5.6</td>
+        </tr>
+      <tr>
+        <td>x</td>
+        <td>3.7</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>8.1</td>
+      </tr>
+      <tr>
+        <td>z</td>
+        <td>2.5</td>
+      </tr>
+    </table>
+
+    <h2>Asignación de Clientes a Entrenadores</h2>
+    <button id="assignButton">¡Asigna!</button>
+
+    <div id="assignmentResult">
+        
+    </div>
+    
+    <script src="assignClients.js"></script>
+    <script>
+      document.getElementById('assignButton').addEventListener('click', function() {
+      const trainers = [
+        { name: 'A', reputation: 4.5, availableSlots: 1 },
+        { name: 'B', reputation: 3.2, availableSlots: 4 },
+        { name: 'C', reputation: 1.2, availableSlots: 3 },
+        { name: 'D', reputation: 3.4, availableSlots: 2 }
+      ];
+
+      const clients = [
+        { name: 'q', reputationImportance: 2.6 },
+        { name: 'r', reputationImportance: 3.7 },
+        { name: 's', reputationImportance: 8.5 },
+        { name: 't', reputationImportance: 9.7 },
+        { name: 'u', reputationImportance: 2.6 },
+        { name: 'v', reputationImportance: 4.7 },
+        { name: 'w', reputationImportance: 5.6 },
+        { name: 'x', reputationImportance: 3.7 },
+        { name: 'y', reputationImportance: 8.1 },
+        { name: 'z', reputationImportance: 2.5 }
+      ];
+
+      // Assign clients to trainers
+      const assignment = assignClients(trainers, clients);
+
+      // HTML Generation
+      let result = '<table class="tableResult">';
+      result += '<tr><th>Entrenador</th><th>Clientes Asignados</th></tr>';
+      for (const [trainer, assignedClients] of Object.entries(assignment)) {
+        result += `<tr><td>${trainer}</td><td>${assignedClients.join(', ')}</td></tr>`;
+      }
+      result += '</table>';
+
+      document.getElementById('assignmentResult').innerHTML = result;
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+#logo {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: auto; 
+  }
+
+table {
+    margin: 15px auto; 
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #000; 
+    padding: 8px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.tableTrainer {
+    background-color: rgb(247, 242, 236); 
+}
+  
+.tableClient {
+    background-color: rgb(167, 184, 231); 
+}
+  
+.tableResult {
+    background-color: rgb(223, 90, 67);
+}
+
+h2{
+    text-align: center;
+    color:  rgb(241, 62, 62);
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#assignButton {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 30px;
+    font-size: 18px;
+    border: 1px solid rgb(167, 184, 231);
+    border-radius: 20px;
+    background-color: white;
+    cursor: pointer;
+}
+#assignButton:hover{
+    background-color: rgb(167, 184, 231);
+}
