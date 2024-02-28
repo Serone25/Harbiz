@@ -16,7 +16,7 @@
       trainers.forEach(trainer => {
         if (trainer.availableSlots > 0) {
           let satisfaction = 0;                                                                             //satisfacción potencial del cliente
-          satisfaction = client.reputationImportance * trainer.reputation;
+          satisfaction = client.reputationImportance * trainer.reputation;                                  //fórmula de satisfacción del cliente
 
           if (satisfaction > maxSatisfaction) {                                                             //actualizar si hay mayor satisfacción
             maxSatisfaction = satisfaction;

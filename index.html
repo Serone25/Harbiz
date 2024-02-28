@@ -85,9 +85,9 @@
     <h2>Asignación de Clientes a Entrenadores</h2>
     <button id="assignButton">¡Asigna!</button>
 
-    <div id="assignmentResult">
-        
-    </div>
+      <div id="assignmentResult">
+          
+      </div>
     
     <script src="assignClients.js"></script>
     <script>
@@ -124,6 +124,10 @@
       result += '</table>';
 
       document.getElementById('assignmentResult').innerHTML = result;
+      
+    
+      document.getElementById('assignmentResult').scrollIntoView();
+     
     });
     </script>
 </body>
