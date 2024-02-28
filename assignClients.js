@@ -1,3 +1,5 @@
+  //test de jest---> 1.- Descomentar el module.exports = {assignClients}  2.- npm test
+  //test de cypress--> 1.- Comentar el module.exports = {assignClients} 2.- npx cypress open
 
   function assignClients(trainers, clients) {
 
@@ -36,4 +38,4 @@
     return assignment;
   } 
 
-  module.exports = {assignClients};                                                                          //test de jest
+  //module.exports = {assignClients};                                                                          //test de jest
